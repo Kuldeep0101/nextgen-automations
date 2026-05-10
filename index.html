@@ -105,17 +105,17 @@
         .nav-links a:hover { color: var(--text-primary); }
         .nav-links a:hover::after { width: 100%; }
         .nav-cta {
-            background: var(--gradient-purple);
-            color: white;
+            background: var(--accent-yellow);
+            color: var(--bg-primary);
             padding: 0.6rem 1.5rem;
             border-radius: 8px;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 0.85rem;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+            box-shadow: 0 4px 15px rgba(250, 204, 21, 0.3);
         }
-        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(168, 85, 247, 0.5); }
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(250, 204, 21, 0.5); color: var(--bg-primary); }
         .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; }
 
         /* Hero */
@@ -402,41 +402,11 @@
         .secondary-service-content p { color: var(--text-secondary); font-size: 0.9rem; }
 
         /* Why Us */
-        .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-        .why-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-glass);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
-        .why-card:hover { border-color: rgba(168, 85, 247, 0.3); transform: translateY(-3px); }
-        .why-card h3 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--accent-purple-light);
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        .why-card h3 i { font-size: 1rem; }
-        .why-card ul { list-style: none; }
-        .why-card ul li { font-size: 0.9rem; color: var(--text-secondary); padding: 0.4rem 0; padding-left: 1.5rem; position: relative; }
-        .why-card ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent-yellow); font-weight: 700; }
+        /* Reusing services-grid styles for Why Us section */
 
         /* Process */
         .process-section { background: var(--bg-secondary); }
-        .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; position: relative; }
-        .process-grid::before {
-            content: '';
-            position: absolute;
-            top: 40px; left: 12.5%; right: 12.5%;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent-purple), var(--accent-yellow));
-            opacity: 0.3;
-        }
+        .process-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem 2rem; position: relative; }
         .process-step { text-align: center; position: relative; }
         .step-number {
             width: 80px; height: 80px;
@@ -625,7 +595,7 @@
                 <a href="#process">Process</a>
                 <a href="#why-us">Why Us</a>
                 <a href="#contact">Contact</a>
-                <a href="https://wa.me/919193669281" target="_blank" class="nav-cta">Book Free Audit</a>
+                <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20would%20like%20to%20book%20an%20audit." target="_blank" class="nav-cta">Book An Audit</a>
             </div>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars"></i>
@@ -642,7 +612,7 @@
         <a href="#process" onclick="toggleMobileMenu()">Process</a>
         <a href="#why-us" onclick="toggleMobileMenu()">Why Us</a>
         <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
-        <a href="https://wa.me/919193669281" target="_blank" class="btn-primary" style="margin-top: 1rem; justify-content: center;">
+        <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20would%20like%20to%20book%20an%20audit." target="_blank" class="btn-primary" style="margin-top: 1rem; justify-content: center;">
             <i class="fab fa-whatsapp"></i> Book Free Audit
         </a>
     </div>
@@ -665,7 +635,7 @@
                     We build custom AI and n8n automation systems for Indian businesses. Respond to leads faster, recover missed calls, automate follow-ups, reduce repetitive admin work, and scale without hiring more staff.
                 </p>
                 <div class="hero-ctas">
-                    <a href="https://wa.me/919193669281" target="_blank" class="btn-primary">
+                    <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20would%20like%20to%20book%20a%20free%20automation%20audit." target="_blank" class="btn-primary">
                         <i class="fab fa-whatsapp"></i> Book a Free Automation Audit
                     </a>
                     <a href="#services" class="btn-secondary">
@@ -809,43 +779,40 @@
                 <h2 class="section-title">Why Work With NextGen Automations</h2>
                 <p class="section-subtitle">We are not a generic tech agency. We are specialists in systems that make Indian businesses money.</p>
             </div>
-            <div class="why-grid">
-                <div class="why-card fade-in">
-                    <h3><i class="fas fa-bullseye"></i> Why It Matters</h3>
-                    <ul>
-                        <li>Every missed lead is lost revenue you will never recover</li>
-                        <li>Manual work scales linearly — automation scales exponentially</li>
-                        <li>Your competitors are already automating. The gap widens daily.</li>
-                        <li>Speed-to-lead is the #1 factor in conversion rates</li>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Why It Matters</h3>
+                    <ul style="list-style: none; margin-top: 1rem;">
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Every missed lead is lost revenue</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Manual work scales linearly, automation scales exponentially</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Speed-to-lead is the #1 factor in conversion rates</li>
                     </ul>
                 </div>
-                <div class="why-card fade-in">
-                    <h3><i class="fas fa-users"></i> Who We Serve</h3>
-                    <ul>
-                        <li>Real estate firms drowning in inbound inquiries</li>
-                        <li>Clinics losing patients to slow response times</li>
-                        <li>Coaching institutes managing hundreds of leads monthly</li>
-                        <li>Agencies buried in reporting and manual client updates</li>
-                        <li>E-commerce brands needing instant WhatsApp engagement</li>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-users"></i></div>
+                    <h3>Who We Serve</h3>
+                    <ul style="list-style: none; margin-top: 1rem;">
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Real estate firms with high inbound inquiries</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Clinics losing patients to slow responses</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Coaching institutes & agencies</li>
                     </ul>
                 </div>
-                <div class="why-card fade-in">
-                    <h3><i class="fas fa-coins"></i> Why ROI Is Obvious</h3>
-                    <ul>
-                        <li>One recovered lead often pays for the entire system</li>
-                        <li>Staff hours saved = direct cost reduction</li>
-                        <li>Faster response = higher close rates = more revenue</li>
-                        <li>Review automation compounds into long-term local SEO value</li>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-coins"></i></div>
+                    <h3>Why ROI Is Obvious</h3>
+                    <ul style="list-style: none; margin-top: 1rem;">
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> One recovered lead pays for the entire system</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Staff hours saved = direct cost reduction</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Faster response = higher close rates</li>
                     </ul>
                 </div>
-                <div class="why-card fade-in">
-                    <h3><i class="fas fa-wrench"></i> Why It Is Practical</h3>
-                    <ul>
-                        <li>Built on n8n — open-source, flexible, no vendor lock-in</li>
-                        <li>Integrates with tools you already use: WhatsApp, Sheets, CRMs</li>
-                        <li>No complex software to learn — it just runs in the background</li>
-                        <li>We handle setup, testing, and ongoing optimization</li>
-                    </ul>
+                <div class="service-card secondary-service fade-in">
+                    <div class="service-icon"><i class="fas fa-wrench"></i></div>
+                    <div class="secondary-service-content">
+                        <h3>Why It Is Practical</h3>
+                        <p>Built on n8n — open-source, flexible, and no vendor lock-in. We integrate with tools you already use like WhatsApp, Sheets, and CRMs. No complex software to learn — it just runs in the background while we handle setup, testing, and ongoing optimization.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -916,10 +883,10 @@
                 <h2 class="cta-title">Ready to Build a Business That Runs Itself?</h2>
                 <p class="cta-subtitle">Replace repetitive operations with workflows that save time, recover leads, and improve revenue. Your first automation audit is free.</p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/919193669281" target="_blank" class="btn-primary">
+                    <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20would%20like%20to%20book%20a%20free%20automation%20audit." target="_blank" class="btn-primary">
                         <i class="fab fa-whatsapp"></i> Book a Free Automation Audit
                     </a>
-                    <a href="https://wa.me/919193669281" target="_blank" class="btn-secondary">
+                    <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20have%20a%20question%20about%20your%20services." target="_blank" class="btn-secondary">
                         <i class="fab fa-whatsapp"></i> Open WhatsApp Chat
                     </a>
                 </div>
@@ -997,7 +964,7 @@
                         <a href="tel:+919193669281">
                             <i class="fas fa-phone"></i> +91 91936 69281
                         </a>
-                        <a href="https://wa.me/919193669281" target="_blank">
+                        <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations" target="_blank">
                             <i class="fab fa-whatsapp"></i> +91 91936 69281
                         </a>
                     </div>
