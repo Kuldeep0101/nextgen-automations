@@ -238,52 +238,77 @@
         }
         .btn-secondary:hover { background: var(--bg-glass); border-color: var(--accent-purple); color: var(--accent-purple-light); }
 
-        .hero-visual { position: relative; height: 500px; display: flex; align-items: center; justify-content: center; }
-        .automation-flow { width: 100%; max-width: 500px; position: relative; height: 400px; }
-        .flow-node {
-            position: absolute;
-            width: 70px; height: 70px;
-            border-radius: 16px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-glass);
+        .hero-visual { position: relative; height: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center; }
+        .automation-pipeline {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            box-shadow: var(--shadow-glow-purple);
-            animation: nodePulse 3s ease-in-out infinite;
-            backdrop-filter: blur(10px);
+            justify-content: space-between;
+            width: 100%;
+            max-width: 500px;
+            padding: 2.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            position: relative;
         }
-        .flow-node i { color: var(--accent-purple); }
-        .flow-node:nth-child(1) { top: 0; left: 10%; animation-delay: 0s; }
-        .flow-node:nth-child(2) { top: 0; left: 50%; transform: translateX(-50%); animation-delay: 0.5s; }
-        .flow-node:nth-child(3) { top: 0; right: 10%; animation-delay: 1s; }
-        .flow-node:nth-child(4) { top: 50%; left: 10%; transform: translateY(-50%); animation-delay: 1.5s; }
-        .flow-node:nth-child(5) { top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: 2s; width: 90px; height: 90px; font-size: 2rem; border-color: var(--accent-purple); }
-        .flow-node:nth-child(6) { top: 50%; right: 10%; transform: translateY(-50%); animation-delay: 2.5s; }
-        .flow-node:nth-child(7) { bottom: 0; left: 10%; animation-delay: 0.3s; }
-        .flow-node:nth-child(8) { bottom: 0; left: 50%; transform: translateX(-50%); animation-delay: 0.8s; }
-        .flow-node:nth-child(9) { bottom: 0; right: 10%; animation-delay: 1.3s; }
-        @keyframes nodePulse {
-            0%, 100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.2); transform: scale(1); }
-            50% { box-shadow: 0 0 40px rgba(168, 85, 247, 0.4); transform: scale(1.05); }
+        .pipeline-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            z-index: 2;
         }
-        .flow-node:nth-child(5) { animation: centerPulse 3s ease-in-out infinite; }
-        @keyframes centerPulse {
-            0%, 100% { box-shadow: 0 0 30px rgba(250, 204, 21, 0.3); }
-            50% { box-shadow: 0 0 60px rgba(250, 204, 21, 0.5); }
+        .node-icon {
+            width: 65px; height: 60px;
+            border-radius: 16px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-glass);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; color: var(--accent-purple);
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
+            transition: all 0.3s ease;
         }
-        .manual-label, .auto-label {
-            position: absolute;
+        .center-node {
+            border-color: var(--accent-yellow);
+            color: var(--accent-yellow);
+            box-shadow: 0 0 25px rgba(250, 204, 21, 0.2);
+            width: 80px; height: 75px; font-size: 2rem;
+            animation: pulse-yellow 2.5s infinite;
+        }
+        .success-node { color: #25d366; }
+        .node-label {
             font-size: 0.75rem;
             font-weight: 700;
+            color: var(--text-secondary);
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            padding: 0.4rem 1rem;
-            border-radius: 6px;
+            letter-spacing: 1.5px;
+            text-align: center;
         }
-        .manual-label { top: -40px; left: 20px; color: var(--text-muted); border: 1px solid var(--border-glass); }
-        .auto-label { bottom: -40px; right: 20px; color: var(--accent-yellow); border: 1px solid rgba(250, 204, 21, 0.3); background: rgba(250, 204, 21, 0.05); }
+        .pipeline-connector {
+            flex-grow: 1;
+            height: 2px;
+            background: rgba(255,255,255,0.05);
+            margin: 0 10px;
+            position: relative;
+            top: -18px;
+            z-index: 1;
+        }
+        .animated-line {
+            position: absolute;
+            top: 0; left: 0; height: 100%; width: 60%;
+            background: linear-gradient(90deg, transparent, var(--accent-purple), transparent);
+            animation: flow-line 2.5s linear infinite;
+        }
+        @keyframes flow-line {
+            0% { left: -60%; }
+            100% { left: 100%; }
+        }
+        @keyframes pulse-yellow {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(250, 204, 21, 0.2); }
+            50% { transform: scale(1.03); box-shadow: 0 0 40px rgba(250, 204, 21, 0.4); }
+        }
 
         /* Trust Strip */
         .trust-strip {
@@ -644,18 +669,25 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="automation-flow">
-                    <div class="flow-node"><i class="fab fa-whatsapp"></i></div>
-                    <div class="flow-node"><i class="fas fa-phone-slash"></i></div>
-                    <div class="flow-node"><i class="fas fa-envelope"></i></div>
-                    <div class="flow-node"><i class="fas fa-file-alt"></i></div>
-                    <div class="flow-node"><i class="fas fa-robot"></i></div>
-                    <div class="flow-node"><i class="fas fa-chart-line"></i></div>
-                    <div class="flow-node"><i class="fas fa-star"></i></div>
-                    <div class="flow-node"><i class="fas fa-calendar-check"></i></div>
-                    <div class="flow-node"><i class="fas fa-database"></i></div>
-                    <span class="manual-label">Manual</span>
-                    <span class="auto-label">Automated</span>
+                <div class="automation-pipeline">
+                    <div class="pipeline-node fade-in">
+                        <div class="node-icon"><i class="fas fa-user-plus"></i></div>
+                        <span class="node-label">New Lead</span>
+                    </div>
+                    <div class="pipeline-connector">
+                        <div class="animated-line"></div>
+                    </div>
+                    <div class="pipeline-node fade-in" style="animation-delay: 0.3s">
+                        <div class="node-icon center-node"><i class="fas fa-robot"></i></div>
+                        <span class="node-label">AI Automation</span>
+                    </div>
+                    <div class="pipeline-connector">
+                        <div class="animated-line"></div>
+                    </div>
+                    <div class="pipeline-node fade-in" style="animation-delay: 0.6s">
+                        <div class="node-icon success-node"><i class="fab fa-whatsapp"></i></div>
+                        <span class="node-label">Instant Chat</span>
+                    </div>
                 </div>
             </div>
         </div>
