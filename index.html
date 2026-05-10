@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NextGen Automations | AI & Automation Systems for Indian Businesses</title>
-    <meta name="description" content="NextGen Automations builds custom AI and n8n automation systems for Indian businesses. Improve speed-to-lead, recover missed calls, and scale operations effortlessly.">
+    <meta name="description"
+        content="NextGen Automations builds custom AI and n8n automation systems for Indian businesses. Improve speed-to-lead, recover missed calls, and scale operations effortlessly.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
@@ -31,8 +35,16 @@
             --shadow-glow-yellow: 0 0 30px rgba(250, 204, 21, 0.15);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
             background: var(--bg-primary);
@@ -41,14 +53,25 @@
             overflow-x: hidden;
         }
 
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg-primary); }
-        ::-webkit-scrollbar-thumb { background: var(--accent-purple); border-radius: 4px; }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-purple);
+            border-radius: 4px;
+        }
 
         /* Navigation */
         .navbar {
             position: fixed;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
             padding: 1.2rem 0;
             background: rgba(10, 10, 15, 0.8);
@@ -56,7 +79,12 @@
             border-bottom: 1px solid var(--border-glass);
             transition: all 0.3s ease;
         }
-        .navbar.scrolled { padding: 0.8rem 0; background: rgba(10, 10, 15, 0.95); }
+
+        .navbar.scrolled {
+            padding: 0.8rem 0;
+            background: rgba(10, 10, 15, 0.95);
+        }
+
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -65,9 +93,16 @@
             justify-content: space-between;
             align-items: center;
         }
-        .logo-wrapper { display: flex; align-items: center; gap: 0.75rem; }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
         .logo-img {
-            width: 48px; height: 48px;
+            width: 48px;
+            height: 48px;
             border-radius: 12px;
             border: 2px solid var(--accent-purple);
             padding: 4px;
@@ -76,7 +111,12 @@
             transition: all 0.3s ease;
             object-fit: contain;
         }
-        .logo-img:hover { box-shadow: 0 0 30px rgba(168, 85, 247, 0.4); transform: scale(1.05); }
+
+        .logo-img:hover {
+            box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
+            transform: scale(1.05);
+        }
+
         .logo-text {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 800;
@@ -84,8 +124,17 @@
             color: var(--text-primary);
             letter-spacing: -0.02em;
         }
-        .logo-text span { color: var(--accent-purple); }
-        .nav-links { display: flex; gap: 2.5rem; align-items: center; }
+
+        .logo-text span {
+            color: var(--accent-purple);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
@@ -94,16 +143,26 @@
             transition: color 0.3s ease;
             position: relative;
         }
+
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -4px; left: 0;
-            width: 0; height: 2px;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
             background: var(--accent-purple);
             transition: width 0.3s ease;
         }
-        .nav-links a:hover { color: var(--text-primary); }
-        .nav-links a:hover::after { width: 100%; }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
         .nav-links a.nav-cta {
             background: var(--accent-yellow);
             color: var(--bg-primary);
@@ -115,8 +174,21 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(250, 204, 21, 0.3);
         }
-        .nav-links a.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(250, 204, 21, 0.5); color: var(--bg-primary); }
-        .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; }
+
+        .nav-links a.nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(250, 204, 21, 0.5);
+            color: var(--bg-primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
 
         /* Hero */
         .hero {
@@ -128,29 +200,51 @@
             background: var(--gradient-hero);
             padding-top: 100px;
         }
-        .hero-bg { position: absolute; inset: 0; overflow: hidden; }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
         .hero-bg::before {
             content: '';
             position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
             background: radial-gradient(circle at 30% 50%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 80%, rgba(250, 204, 21, 0.05) 0%, transparent 40%);
+                radial-gradient(circle at 70% 80%, rgba(250, 204, 21, 0.05) 0%, transparent 40%);
             animation: heroFloat 20s ease-in-out infinite;
         }
+
         @keyframes heroFloat {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(30px, -30px) rotate(1deg); }
-            66% { transform: translate(-20px, 20px) rotate(-1deg); }
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            33% {
+                transform: translate(30px, -30px) rotate(1deg);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) rotate(-1deg);
+            }
         }
+
         .hero-grid {
-            position: absolute; inset: 0;
-            background-image: 
+            position: absolute;
+            inset: 0;
+            background-image:
                 linear-gradient(rgba(168, 85, 247, 0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(168, 85, 247, 0.03) 1px, transparent 1px);
             background-size: 60px 60px;
             mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
         }
+
         .hero-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -162,7 +256,11 @@
             position: relative;
             z-index: 1;
         }
-        .hero-content { max-width: 600px; }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -177,6 +275,7 @@
             margin-bottom: 2rem;
             animation: fadeInUp 0.6s ease;
         }
+
         .hero-title {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 3.5rem;
@@ -186,12 +285,14 @@
             margin-bottom: 2rem;
             animation: fadeInUp 0.6s ease 0.1s both;
         }
+
         .hero-title .highlight {
             background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-yellow) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
         .hero-subtitle {
             font-size: 1.15rem;
             color: var(--text-secondary);
@@ -199,12 +300,14 @@
             margin-bottom: 3rem;
             animation: fadeInUp 0.6s ease 0.2s both;
         }
+
         .hero-ctas {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
             animation: fadeInUp 0.6s ease 0.3s both;
         }
+
         .btn-primary {
             display: inline-flex;
             align-items: center;
@@ -221,7 +324,12 @@
             border: none;
             cursor: pointer;
         }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(168, 85, 247, 0.6); }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(168, 85, 247, 0.6);
+        }
+
         .btn-secondary {
             display: inline-flex;
             align-items: center;
@@ -236,9 +344,22 @@
             transition: all 0.3s ease;
             border: 1px solid var(--border-glass);
         }
-        .btn-secondary:hover { background: var(--bg-glass); border-color: var(--accent-purple); color: var(--accent-purple-light); }
 
-        .hero-visual { position: relative; height: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center; }
+        .btn-secondary:hover {
+            background: var(--bg-glass);
+            border-color: var(--accent-purple);
+            color: var(--accent-purple-light);
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 100%;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .automation-pipeline {
             display: flex;
             align-items: center;
@@ -249,9 +370,10 @@
             background: var(--bg-card);
             border: 1px solid var(--border-glass);
             border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
             position: relative;
         }
+
         .pipeline-node {
             display: flex;
             flex-direction: column;
@@ -260,24 +382,36 @@
             position: relative;
             z-index: 2;
         }
+
         .node-icon {
-            width: 65px; height: 60px;
+            width: 65px;
+            height: 60px;
             border-radius: 16px;
             background: var(--bg-primary);
             border: 1px solid var(--border-glass);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.5rem; color: var(--accent-purple);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--accent-purple);
             box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
             transition: all 0.3s ease;
         }
+
         .center-node {
             border-color: var(--accent-yellow);
             color: var(--accent-yellow);
             box-shadow: 0 0 25px rgba(250, 204, 21, 0.2);
-            width: 80px; height: 75px; font-size: 2rem;
+            width: 80px;
+            height: 75px;
+            font-size: 2rem;
             animation: pulse-yellow 2.5s infinite;
         }
-        .success-node { color: #25d366; }
+
+        .success-node {
+            color: #25d366;
+        }
+
         .node-label {
             font-size: 0.75rem;
             font-weight: 700;
@@ -286,28 +420,49 @@
             letter-spacing: 1.5px;
             text-align: center;
         }
+
         .pipeline-connector {
             flex-grow: 1;
             height: 2px;
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             margin: 0 10px;
             position: relative;
             top: -18px;
             z-index: 1;
         }
+
         .animated-line {
             position: absolute;
-            top: 0; left: 0; height: 100%; width: 60%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 60%;
             background: linear-gradient(90deg, transparent, var(--accent-purple), transparent);
             animation: flow-line 2.5s linear infinite;
         }
+
         @keyframes flow-line {
-            0% { left: -60%; }
-            100% { left: 100%; }
+            0% {
+                left: -60%;
+            }
+
+            100% {
+                left: 100%;
+            }
         }
+
         @keyframes pulse-yellow {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(250, 204, 21, 0.2); }
-            50% { transform: scale(1.03); box-shadow: 0 0 40px rgba(250, 204, 21, 0.4); }
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(250, 204, 21, 0.2);
+            }
+
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 0 40px rgba(250, 204, 21, 0.4);
+            }
         }
 
         /* Trust Strip */
@@ -319,6 +474,7 @@
             position: relative;
             z-index: 2;
         }
+
         .trust-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -328,13 +484,39 @@
             flex-wrap: wrap;
             gap: 3rem;
         }
-        .trust-item { display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); }
-        .trust-item i { color: var(--accent-yellow); font-size: 1rem; }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .trust-item i {
+            color: var(--accent-yellow);
+            font-size: 1rem;
+        }
 
         /* Section Styles */
-        .section { padding: 10rem 0; position: relative; }
-        .section-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .section-header { text-align: center; max-width: 700px; margin: 0 auto 6rem; }
+        .section {
+            padding: 10rem 0;
+            position: relative;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 6rem;
+        }
+
         .section-label {
             display: inline-block;
             font-size: 0.8rem;
@@ -344,6 +526,7 @@
             color: var(--accent-purple);
             margin-bottom: 1rem;
         }
+
         .section-title {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 2.5rem;
@@ -352,10 +535,20 @@
             margin-bottom: 1.5rem;
             letter-spacing: -0.02em;
         }
-        .section-subtitle { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
 
         /* Problem Grid */
-        .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
         .problem-card {
             background: var(--bg-card);
             border: 1px solid var(--border-glass);
@@ -364,9 +557,16 @@
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
         }
-        .problem-card:hover { border-color: rgba(168, 85, 247, 0.3); transform: translateY(-5px); box-shadow: var(--shadow-glow-purple); }
+
+        .problem-card:hover {
+            border-color: rgba(168, 85, 247, 0.3);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-glow-purple);
+        }
+
         .problem-icon {
-            width: 50px; height: 50px;
+            width: 50px;
+            height: 50px;
             border-radius: 12px;
             background: rgba(239, 68, 68, 0.1);
             border: 1px solid rgba(239, 68, 68, 0.2);
@@ -375,12 +575,32 @@
             justify-content: center;
             margin-bottom: 1rem;
         }
-        .problem-icon i { color: #ef4444; font-size: 1.2rem; }
-        .problem-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary); }
-        .problem-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
+
+        .problem-icon i {
+            color: #ef4444;
+            font-size: 1.2rem;
+        }
+
+        .problem-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .problem-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
 
         /* Services Grid */
-        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
         .service-card {
             background: var(--bg-card);
             border: 1px solid var(--border-glass);
@@ -391,19 +611,32 @@
             overflow: hidden;
             backdrop-filter: blur(10px);
         }
+
         .service-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             height: 3px;
             background: var(--gradient-purple);
             transform: scaleX(0);
             transition: transform 0.4s ease;
         }
-        .service-card:hover::before { transform: scaleX(1); }
-        .service-card:hover { border-color: rgba(168, 85, 247, 0.3); transform: translateY(-8px); box-shadow: var(--shadow-glow-purple); }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            border-color: rgba(168, 85, 247, 0.3);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-glow-purple);
+        }
+
         .service-icon {
-            width: 60px; height: 60px;
+            width: 60px;
+            height: 60px;
             border-radius: 16px;
             background: rgba(168, 85, 247, 0.1);
             border: 1px solid rgba(168, 85, 247, 0.2);
@@ -414,27 +647,97 @@
             font-size: 1.5rem;
             color: var(--accent-purple);
         }
-        .service-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; }
-        .service-card .service-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem; }
-        .service-card .service-for { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; padding: 0.5rem 0.75rem; background: rgba(255, 255, 255, 0.03); border-radius: 8px; display: inline-block; }
-        .service-card .service-for strong { color: var(--accent-purple-light); }
-        .service-card .service-outcome { font-size: 0.85rem; color: var(--accent-yellow); font-weight: 600; padding-top: 1rem; border-top: 1px solid var(--border-glass); }
-        .service-card .service-outcome i { margin-right: 0.5rem; }
-        .secondary-service { grid-column: span 3; display: flex; align-items: center; gap: 2rem; padding: 2rem; margin-top: 1rem; }
-        .secondary-service .service-icon { margin-bottom: 0; flex-shrink: 0; }
-        .secondary-service-content { flex: 1; }
-        .secondary-service-content h3 { margin-bottom: 0.5rem; }
-        .secondary-service-content p { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .service-card h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card .service-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .service-card .service-for {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            padding: 0.5rem 0.75rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .service-card .service-for strong {
+            color: var(--accent-purple-light);
+        }
+
+        .service-card .service-outcome {
+            font-size: 0.85rem;
+            color: var(--accent-yellow);
+            font-weight: 600;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-glass);
+        }
+
+        .service-card .service-outcome i {
+            margin-right: 0.5rem;
+        }
+
+        .secondary-service {
+            grid-column: span 3;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem;
+            margin-top: 1rem;
+        }
+
+        .secondary-service .service-icon {
+            margin-bottom: 0;
+            flex-shrink: 0;
+        }
+
+        .secondary-service-content {
+            flex: 1;
+        }
+
+        .secondary-service-content h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .secondary-service-content p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
 
         /* Why Us */
         /* Reusing services-grid styles for Why Us section */
 
         /* Process */
-        .process-section { background: var(--bg-secondary); }
-        .process-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem 2rem; position: relative; }
-        .process-step { text-align: center; position: relative; }
+        .process-section {
+            background: var(--bg-secondary);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem 2rem;
+            position: relative;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
         .step-number {
-            width: 80px; height: 80px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             background: var(--bg-card);
             border: 2px solid var(--accent-purple);
@@ -450,11 +753,28 @@
             z-index: 2;
             box-shadow: var(--shadow-glow-purple);
         }
-        .process-step h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; }
-        .process-step p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
+
+        .process-step h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
 
         /* Tech Stack */
-        .tech-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
         .tech-pill {
             display: inline-flex;
             align-items: center;
@@ -468,11 +788,25 @@
             color: var(--text-secondary);
             transition: all 0.3s ease;
         }
-        .tech-pill:hover { border-color: var(--accent-purple); color: var(--text-primary); transform: translateY(-2px); box-shadow: var(--shadow-glow-purple); }
-        .tech-pill i { color: var(--accent-purple); font-size: 1rem; }
+
+        .tech-pill:hover {
+            border-color: var(--accent-purple);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow-purple);
+        }
+
+        .tech-pill i {
+            color: var(--accent-purple);
+            font-size: 1rem;
+        }
 
         /* CTA Section */
-        .cta-section { background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(168, 85, 247, 0.05) 50%, var(--bg-primary) 100%); text-align: center; }
+        .cta-section {
+            background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(168, 85, 247, 0.05) 50%, var(--bg-primary) 100%);
+            text-align: center;
+        }
+
         .cta-box {
             background: var(--bg-card);
             border: 1px solid var(--border-glass);
@@ -483,22 +817,62 @@
             position: relative;
             overflow: hidden;
         }
+
         .cta-box::before {
             content: '';
             position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
             background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
             animation: ctaGlow 8s ease-in-out infinite;
         }
-        @keyframes ctaGlow { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(10%, 10%); } }
-        .cta-box > * { position: relative; z-index: 1; }
-        .cta-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; }
-        .cta-subtitle { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.7; }
-        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+        @keyframes ctaGlow {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(10%, 10%);
+            }
+        }
+
+        .cta-box>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
         /* Contact Section */
-        .contact-section { background: var(--bg-secondary); padding: 6rem 0; }
+        .contact-section {
+            background: var(--bg-secondary);
+            padding: 6rem 0;
+        }
+
         .contact-form-wrapper {
             max-width: 600px;
             margin: 0 auto;
@@ -507,11 +881,35 @@
             border: 1px solid var(--border-glass);
             border-radius: 20px;
         }
-        .contact-form-wrapper h3 { text-align: center; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem; margin-bottom: 0.5rem; }
-        .contact-form-wrapper > p { text-align: center; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem; }
-        .form-group { margin-bottom: 1.5rem; }
-        .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem; }
-        .form-group input, .form-group textarea {
+
+        .contact-form-wrapper h3 {
+            text-align: center;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form-wrapper>p {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
             width: 100%;
             padding: 1rem;
             background: rgba(10, 10, 15, 0.5);
@@ -522,22 +920,93 @@
             font-size: 0.95rem;
             transition: all 0.3s ease;
         }
-        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent-purple); box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1); }
-        .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-purple);
+            box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--text-muted);
+        }
 
         /* Footer */
-        .footer { background: var(--bg-primary); border-top: 1px solid var(--border-glass); padding: 4rem 0 2rem; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-        .footer-brand { max-width: 400px; }
-        .footer-brand .logo-wrapper { margin-bottom: 1rem; }
-        .footer-brand p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem; }
-        .footer-links h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--text-primary); }
-        .footer-links a { display: block; color: var(--text-secondary); text-decoration: none; padding: 0.4rem 0; font-size: 0.9rem; transition: color 0.3s ease; }
-        .footer-links a:hover { color: var(--accent-purple); }
-        .footer-contact { margin-top: 1rem; }
-        .footer-contact a { display: flex; align-items: center; gap: 0.75rem; color: var(--text-secondary); text-decoration: none; padding: 0.5rem 0; font-size: 0.9rem; transition: color 0.3s ease; }
-        .footer-contact a:hover { color: var(--accent-purple); }
-        .footer-contact i { color: var(--accent-purple); width: 20px; }
+        .footer {
+            background: var(--bg-primary);
+            border-top: 1px solid var(--border-glass);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            max-width: 400px;
+        }
+
+        .footer-brand .logo-wrapper {
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .footer-links a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-purple);
+        }
+
+        .footer-contact {
+            margin-top: 1rem;
+        }
+
+        .footer-contact a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-contact a:hover {
+            color: var(--accent-purple);
+        }
+
+        .footer-contact i {
+            color: var(--accent-purple);
+            width: 20px;
+        }
+
         .whatsapp-btn {
             display: inline-flex;
             align-items: center;
@@ -551,61 +1020,185 @@
             text-decoration: none;
             transition: all 0.3s ease;
         }
-        .whatsapp-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); }
-        .footer-bottom { border-top: 1px solid var(--border-glass); padding-top: 2rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-glass);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
 
         /* Animations */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .hero-container { grid-template-columns: 1fr; text-align: center; }
-            .hero-content { max-width: 100%; }
-            .hero-ctas { justify-content: center; }
-            .hero-visual { height: 400px; }
-            .problem-grid, .services-grid { grid-template-columns: repeat(2, 1fr); }
-            .secondary-service { grid-column: span 2; }
-            .why-grid { grid-template-columns: 1fr; }
-            .process-grid { grid-template-columns: repeat(2, 1fr); }
-            .process-grid::before { display: none; }
-            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-ctas {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                height: 400px;
+            }
+
+            .problem-grid,
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .secondary-service {
+                grid-column: span 2;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid::before {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
+
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
-            .hero-title { font-size: 2.5rem; }
-            .section-title { font-size: 2rem; }
-            .problem-grid, .services-grid { grid-template-columns: 1fr; }
-            .secondary-service { grid-column: span 1; flex-direction: column; text-align: center; }
-            .process-grid { grid-template-columns: 1fr; }
-            .cta-box { padding: 2rem; }
-            .cta-title { font-size: 1.75rem; }
-            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .trust-container { flex-direction: column; align-items: center; }
-            .contact-form-wrapper { padding: 1.5rem; }
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .problem-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .secondary-service {
+                grid-column: span 1;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-box {
+                padding: 2rem;
+            }
+
+            .cta-title {
+                font-size: 1.75rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .trust-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-form-wrapper {
+                padding: 1.5rem;
+            }
         }
 
         /* Mobile Menu */
         .mobile-menu {
             display: none;
             position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background: var(--bg-primary);
             z-index: 999;
             padding: 6rem 2rem 2rem;
             flex-direction: column;
             gap: 2rem;
         }
-        .mobile-menu.active { display: flex; }
-        .mobile-menu a { color: var(--text-primary); text-decoration: none; font-size: 1.25rem; font-weight: 600; padding: 1rem 0; border-bottom: 1px solid var(--border-glass); }
-        .mobile-close { position: absolute; top: 1.5rem; right: 2rem; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 600;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        .mobile-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -620,7 +1213,8 @@
                 <a href="#process">Process</a>
                 <a href="#why-us">Why Us</a>
                 <a href="#contact">Contact</a>
-                <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20would%20like%20to%20book%20an%20audit." target="_blank" class="nav-cta">Book An Audit</a>
+                <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20would%20like%20to%20book%20an%20audit."
+                    target="_blank" class="nav-cta">Book An Audit</a>
             </div>
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars"></i>
@@ -637,7 +1231,8 @@
         <a href="#process" onclick="toggleMobileMenu()">Process</a>
         <a href="#why-us" onclick="toggleMobileMenu()">Why Us</a>
         <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
-        <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20would%20like%20to%20book%20an%20audit." target="_blank" class="btn-primary" style="margin-top: 1rem; justify-content: center;">
+        <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20would%20like%20to%20book%20an%20audit."
+            target="_blank" class="btn-primary" style="margin-top: 1rem; justify-content: center;">
             <i class="fab fa-whatsapp"></i> Book Free Audit
         </a>
     </div>
@@ -657,10 +1252,13 @@
                     Stop Trading CEO Hours for <span class="highlight">Manual Work</span>
                 </h1>
                 <p class="hero-subtitle">
-                    We build custom AI and n8n automation systems for Indian businesses. Respond to leads faster, recover missed calls, automate follow-ups, reduce repetitive admin work, and scale without hiring more staff.
+                    We build custom AI and n8n automation systems for Indian businesses. Respond to leads faster,
+                    recover missed calls, automate follow-ups, reduce repetitive admin work, and scale without hiring
+                    more staff.
                 </p>
                 <div class="hero-ctas">
-                    <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20would%20like%20to%20book%20a%20free%20automation%20audit." target="_blank" class="btn-primary">
+                    <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20would%20like%20to%20book%20a%20free%20automation%20audit."
+                        target="_blank" class="btn-primary">
                         <i class="fab fa-whatsapp"></i> Book a Free Automation Audit
                     </a>
                     <a href="#services" class="btn-secondary">
@@ -686,7 +1284,7 @@
                     </div>
                     <div class="pipeline-node fade-in" style="animation-delay: 0.6s">
                         <div class="node-icon success-node"><i class="fab fa-whatsapp"></i></div>
-                        <span class="node-label">Instant Chat</span>
+                        <span class="node-label">Instant Reply</span>
                     </div>
                 </div>
             </div>
@@ -711,23 +1309,27 @@
             <div class="section-header fade-in">
                 <span class="section-label">The Problem</span>
                 <h2 class="section-title">Is This Your Business Right Now?</h2>
-                <p class="section-subtitle">Most Indian SMBs lose revenue every day to broken manual processes. Here is what we see repeatedly.</p>
+                <p class="section-subtitle">Most Indian SMBs lose revenue every day to broken manual processes. Here is
+                    what we see repeatedly.</p>
             </div>
             <div class="problem-grid">
                 <div class="problem-card fade-in">
                     <div class="problem-icon"><i class="fas fa-hourglass-half"></i></div>
                     <h3>Slow Lead Response</h3>
-                    <p>Losing leads because replies take hours. By the time you respond, your competitor already closed the deal.</p>
+                    <p>Losing leads because replies take hours. By the time you respond, your competitor already closed
+                        the deal.</p>
                 </div>
                 <div class="problem-card fade-in">
                     <div class="problem-icon"><i class="fas fa-phone-slash"></i></div>
                     <h3>Missed Calls & Messages</h3>
-                    <p>Chasing missed calls and unanswered WhatsApp messages manually. Every missed call is a missed sale.</p>
+                    <p>Chasing missed calls and unanswered WhatsApp messages manually. Every missed call is a missed
+                        sale.</p>
                 </div>
                 <div class="problem-card fade-in">
                     <div class="problem-icon"><i class="fas fa-copy"></i></div>
                     <h3>Data Copy-Pasting</h3>
-                    <p>Copy-pasting data between Excel, CRM, invoices, and internal tools. Hours wasted on work a machine should do.</p>
+                    <p>Copy-pasting data between Excel, CRM, invoices, and internal tools. Hours wasted on work a
+                        machine should do.</p>
                 </div>
                 <div class="problem-card fade-in">
                     <div class="problem-icon"><i class="fas fa-hand-paper"></i></div>
@@ -742,7 +1344,8 @@
                 <div class="problem-card fade-in">
                     <div class="problem-icon"><i class="fas fa-money-bill-wave"></i></div>
                     <h3>Weak Follow-Up Systems</h3>
-                    <p>Losing revenue due to weak follow-up systems. Leads go cold because no one followed up on time.</p>
+                    <p>Losing revenue due to weak follow-up systems. Leads go cold because no one followed up on time.
+                    </p>
                 </div>
             </div>
         </div>
@@ -754,49 +1357,67 @@
             <div class="section-header fade-in">
                 <span class="section-label">Solutions</span>
                 <h2 class="section-title">Top Automation Services We Build</h2>
-                <p class="section-subtitle">Every system is custom-built for your workflow. No templates. No generic bots. Just results.</p>
+                <p class="section-subtitle">Every system is custom-built for your workflow. No templates. No generic
+                    bots. Just results.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="service-icon"><i class="fab fa-whatsapp"></i></div>
                     <h3>WhatsApp Appointment Bot + Missed-Call Recovery</h3>
-                    <p class="service-desc">Automated systems that reply instantly on WhatsApp, handle inbound questions, recover missed calls, capture intent, and push leads toward booking.</p>
-                    <div class="service-for"><strong>For:</strong> Clinics, real estate, salons, coaching institutes, local services</div>
-                    <div class="service-outcome"><i class="fas fa-arrow-up"></i> More bookings, fewer lost leads, zero manual follow-up</div>
+                    <p class="service-desc">Automated systems that reply instantly on WhatsApp, handle inbound
+                        questions, recover missed calls, capture intent, and push leads toward booking.</p>
+                    <div class="service-for"><strong>For:</strong> Clinics, real estate, salons, coaching institutes,
+                        local services</div>
+                    <div class="service-outcome"><i class="fas fa-arrow-up"></i> More bookings, fewer lost leads, zero
+                        manual follow-up</div>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-bolt"></i></div>
                     <h3>Speed-to-Lead / Lead Qualification</h3>
-                    <p class="service-desc">Automated chat, SMS, or WhatsApp workflows that respond instantly to new leads, qualify them, ask the right questions, and route them to the right next step.</p>
-                    <div class="service-for"><strong>For:</strong> Any business running ads or collecting leads from websites, forms, or social media</div>
-                    <div class="service-outcome"><i class="fas fa-arrow-up"></i> Higher conversion, faster response, better lead quality</div>
+                    <p class="service-desc">Automated chat, SMS, or WhatsApp workflows that respond instantly to new
+                        leads, qualify them, ask the right questions, and route them to the right next step.</p>
+                    <div class="service-for"><strong>For:</strong> Any business running ads or collecting leads from
+                        websites, forms, or social media</div>
+                    <div class="service-outcome"><i class="fas fa-arrow-up"></i> Higher conversion, faster response,
+                        better lead quality</div>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-star"></i></div>
                     <h3>Review & Reputation Automation</h3>
-                    <p class="service-desc">Automated systems that request Google reviews after a sale or service, manage positive/negative feedback flows, and send alerts or auto-responses for new reviews.</p>
-                    <div class="service-for"><strong>For:</strong> Restaurants, clinics, home services, salons, gyms, hotels, auto shops</div>
-                    <div class="service-outcome"><i class="fas fa-arrow-up"></i> More 5-star reviews, stronger local trust, better Google visibility</div>
+                    <p class="service-desc">Automated systems that request Google reviews after a sale or service,
+                        manage positive/negative feedback flows, and send alerts or auto-responses for new reviews.</p>
+                    <div class="service-for"><strong>For:</strong> Restaurants, clinics, home services, salons, gyms,
+                        hotels, auto shops</div>
+                    <div class="service-outcome"><i class="fas fa-arrow-up"></i> More 5-star reviews, stronger local
+                        trust, better Google visibility</div>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-chart-line"></i></div>
                     <h3>Client Reporting Automation</h3>
-                    <p class="service-desc">Automated dashboards and recurring reports that pull data from ads, CRM, spreadsheets, forms, and project tools into clean reports for clients or internal teams.</p>
-                    <div class="service-for"><strong>For:</strong> Agencies, consultants, marketing teams, businesses needing weekly/monthly reporting</div>
-                    <div class="service-outcome"><i class="fas fa-arrow-up"></i> Saves hours weekly, improves transparency, stronger retainers</div>
+                    <p class="service-desc">Automated dashboards and recurring reports that pull data from ads, CRM,
+                        spreadsheets, forms, and project tools into clean reports for clients or internal teams.</p>
+                    <div class="service-for"><strong>For:</strong> Agencies, consultants, marketing teams, businesses
+                        needing weekly/monthly reporting</div>
+                    <div class="service-outcome"><i class="fas fa-arrow-up"></i> Saves hours weekly, improves
+                        transparency, stronger retainers</div>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-file-invoice"></i></div>
                     <h3>Document Processing Automation</h3>
-                    <p class="service-desc">Automation for invoices, receipts, contracts, forms, resumes, order documents, and internal files using AI extraction and workflow routing.</p>
-                    <div class="service-for"><strong>For:</strong> Finance, operations, HR, logistics, agencies handling heavy paperwork</div>
-                    <div class="service-outcome"><i class="fas fa-arrow-up"></i> Less data entry, fewer errors, faster approvals, cleaner ops</div>
+                    <p class="service-desc">Automation for invoices, receipts, contracts, forms, resumes, order
+                        documents, and internal files using AI extraction and workflow routing.</p>
+                    <div class="service-for"><strong>For:</strong> Finance, operations, HR, logistics, agencies handling
+                        heavy paperwork</div>
+                    <div class="service-outcome"><i class="fas fa-arrow-up"></i> Less data entry, fewer errors, faster
+                        approvals, cleaner ops</div>
                 </div>
                 <div class="service-card secondary-service fade-in">
                     <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
                     <div class="secondary-service-content">
                         <h3>Internal CRM & Workflow Automation</h3>
-                        <p>Connect your CRM, project tools, spreadsheets, and communication channels into one seamless automated workflow. From lead capture to project delivery, nothing falls through the cracks.</p>
+                        <p>Connect your CRM, project tools, spreadsheets, and communication channels into one seamless
+                            automated workflow. From lead capture to project delivery, nothing falls through the cracks.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -809,41 +1430,60 @@
             <div class="section-header fade-in">
                 <span class="section-label">Why Us</span>
                 <h2 class="section-title">Why Work With NextGen Automations</h2>
-                <p class="section-subtitle">We are not a generic tech agency. We are specialists in systems that make Indian businesses money.</p>
+                <p class="section-subtitle">We are not a generic tech agency. We are specialists in systems that make
+                    Indian businesses money.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-bullseye"></i></div>
                     <h3>Why It Matters</h3>
                     <ul style="list-style: none; margin-top: 1rem;">
-                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Every missed lead is lost revenue</li>
-                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Manual work scales linearly, automation scales exponentially</li>
-                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Speed-to-lead is the #1 factor in conversion rates</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong
+                                style="color: var(--accent-yellow);">→</strong> Every missed lead is lost revenue</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong
+                                style="color: var(--accent-yellow);">→</strong> Manual work scales linearly, automation
+                            scales exponentially</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong
+                                style="color: var(--accent-yellow);">→</strong> Speed-to-lead is the #1 factor in
+                            conversion rates</li>
                     </ul>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-users"></i></div>
                     <h3>Who We Serve</h3>
                     <ul style="list-style: none; margin-top: 1rem;">
-                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Real estate firms with high inbound inquiries</li>
-                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Clinics losing patients to slow responses</li>
-                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Coaching institutes & agencies</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong
+                                style="color: var(--accent-yellow);">→</strong> Real estate firms with high inbound
+                            inquiries</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong
+                                style="color: var(--accent-yellow);">→</strong> Clinics losing patients to slow
+                            responses</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong
+                                style="color: var(--accent-yellow);">→</strong> Coaching institutes & agencies</li>
                     </ul>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-coins"></i></div>
                     <h3>Why ROI Is Obvious</h3>
                     <ul style="list-style: none; margin-top: 1rem;">
-                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> One recovered lead pays for the entire system</li>
-                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Staff hours saved = direct cost reduction</li>
-                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong style="color: var(--accent-yellow);">→</strong> Faster response = higher close rates</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong
+                                style="color: var(--accent-yellow);">→</strong> One recovered lead pays for the entire
+                            system</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong
+                                style="color: var(--accent-yellow);">→</strong> Staff hours saved = direct cost
+                            reduction</li>
+                        <li style="padding: 0.4rem 0; font-size: 0.9rem; color: var(--text-secondary);"><strong
+                                style="color: var(--accent-yellow);">→</strong> Faster response = higher close rates
+                        </li>
                     </ul>
                 </div>
                 <div class="service-card secondary-service fade-in">
                     <div class="service-icon"><i class="fas fa-wrench"></i></div>
                     <div class="secondary-service-content">
                         <h3>Why It Is Practical</h3>
-                        <p>Built on n8n — open-source, flexible, and no vendor lock-in. We integrate with tools you already use like WhatsApp, Sheets, and CRMs. No complex software to learn — it just runs in the background while we handle setup, testing, and ongoing optimization.</p>
+                        <p>Built on n8n — open-source, flexible, and no vendor lock-in. We integrate with tools you
+                            already use like WhatsApp, Sheets, and CRMs. No complex software to learn — it just runs in
+                            the background while we handle setup, testing, and ongoing optimization.</p>
                     </div>
                 </div>
             </div>
@@ -856,28 +1496,33 @@
             <div class="section-header fade-in">
                 <span class="section-label">Our Process</span>
                 <h2 class="section-title">How We Work</h2>
-                <p class="section-subtitle">Fast, structured, and transparent. From first call to live automation in days, not months.</p>
+                <p class="section-subtitle">Fast, structured, and transparent. From first call to live automation in
+                    days, not months.</p>
             </div>
             <div class="process-grid">
                 <div class="process-step fade-in">
                     <div class="step-number">1</div>
                     <h3>Audit the Workflow</h3>
-                    <p>We map your current process, identify leakages, and pinpoint exactly where automation will drive ROI.</p>
+                    <p>We map your current process, identify leakages, and pinpoint exactly where automation will drive
+                        ROI.</p>
                 </div>
                 <div class="process-step fade-in">
                     <div class="step-number">2</div>
                     <h3>Design the Automation</h3>
-                    <p>We architect the system flow, select the right tools, and define success metrics before writing a single line of logic.</p>
+                    <p>We architect the system flow, select the right tools, and define success metrics before writing a
+                        single line of logic.</p>
                 </div>
                 <div class="process-step fade-in">
                     <div class="step-number">3</div>
                     <h3>Build & Test</h3>
-                    <p>We build your automation in n8n, rigorously test every trigger and edge case, and refine until it is bulletproof.</p>
+                    <p>We build your automation in n8n, rigorously test every trigger and edge case, and refine until it
+                        is bulletproof.</p>
                 </div>
                 <div class="process-step fade-in">
                     <div class="step-number">4</div>
                     <h3>Launch & Optimize</h3>
-                    <p>We deploy, monitor performance, and continuously optimize based on real data and your feedback.</p>
+                    <p>We deploy, monitor performance, and continuously optimize based on real data and your feedback.
+                    </p>
                 </div>
             </div>
         </div>
@@ -889,7 +1534,8 @@
             <div class="section-header fade-in">
                 <span class="section-label">Tech Stack</span>
                 <h2 class="section-title">Tools We Work With</h2>
-                <p class="section-subtitle">We integrate with the platforms your business already runs on. No rip-and-replace needed.</p>
+                <p class="section-subtitle">We integrate with the platforms your business already runs on. No
+                    rip-and-replace needed.</p>
             </div>
             <div class="tech-grid fade-in">
                 <div class="tech-pill"><i class="fas fa-project-diagram"></i> n8n</div>
@@ -913,12 +1559,15 @@
         <div class="section-container">
             <div class="cta-box fade-in">
                 <h2 class="cta-title">Ready to Build a Business That Runs Itself?</h2>
-                <p class="cta-subtitle">Replace repetitive operations with workflows that save time, recover leads, and improve revenue. Your first automation audit is free.</p>
+                <p class="cta-subtitle">Replace repetitive operations with workflows that save time, recover leads, and
+                    improve revenue. Your first automation audit is free.</p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20would%20like%20to%20book%20a%20free%20automation%20audit." target="_blank" class="btn-primary">
+                    <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20would%20like%20to%20book%20a%20free%20automation%20audit."
+                        target="_blank" class="btn-primary">
                         <i class="fab fa-whatsapp"></i> Book a Free Automation Audit
                     </a>
-                    <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20have%20a%20question%20about%20your%20services." target="_blank" class="btn-secondary">
+                    <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20have%20a%20question%20about%20your%20services."
+                        target="_blank" class="btn-secondary">
                         <i class="fab fa-whatsapp"></i> Open WhatsApp Chat
                     </a>
                 </div>
@@ -932,7 +1581,8 @@
             <div class="section-header fade-in" style="margin-bottom: 3rem;">
                 <span class="section-label">Get In Touch</span>
                 <h2 class="section-title">Send Us a Message</h2>
-                <p class="section-subtitle">Tell us about your business and what you want to automate. We will get back to you within 24 hours.</p>
+                <p class="section-subtitle">Tell us about your business and what you want to automate. We will get back
+                    to you within 24 hours.</p>
             </div>
             <div class="contact-form-wrapper fade-in">
                 <!-- 
@@ -952,11 +1602,14 @@
                     </div>
                     <div class="form-group">
                         <label for="location">Business Location (City)</label>
-                        <input type="text" id="location" name="location" placeholder="e.g., Mumbai, Delhi, Bangalore" required>
+                        <input type="text" id="location" name="location" placeholder="e.g., Mumbai, Delhi, Bangalore"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="message">How can we help you?</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your business and what you want to automate..." required></textarea>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Tell us about your business and what you want to automate..."
+                            required></textarea>
                     </div>
                     <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
                         <i class="fab fa-whatsapp"></i> Send via WhatsApp
@@ -975,8 +1628,10 @@
                         <img src="nextgen_automations_logo.png" alt="NextGen Automations" class="logo-img">
                         <div class="logo-text">NextGen <span>Automations</span></div>
                     </div>
-                    <p>We build custom AI and automation systems that help Indian businesses respond faster, recover missed opportunities, reduce manual work, and scale without adding headcount.</p>
-                    <a href="https://wa.me/919193669281" target="_blank" class="whatsapp-btn">
+                    <p>We build custom AI and automation systems that help Indian businesses respond faster, recover
+                        missed opportunities, reduce manual work, and scale without adding headcount.</p>
+                    <a href="https://wa.me/919193669281?text=Hi%20NextGen%20Automations%2C%20I%20have%20a%20question%20about%20your%20services."
+                        target="_blank" class="whatsapp-btn">
                         <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                     </a>
                 </div>
@@ -1003,7 +1658,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>NextGen Automations — Helping Indian businesses automate faster, respond smarter, and scale without limits.</p>
+                <p>NextGen Automations — Helping Indian businesses automate faster, respond smarter, and scale without
+                    limits.</p>
                 <p style="margin-top: 0.5rem;">© 2026 NextGen Automations. All rights reserved.</p>
             </div>
         </div>
@@ -1083,7 +1739,7 @@
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
@@ -1096,4 +1752,5 @@
         });
     </script>
 </body>
+
 </html>
